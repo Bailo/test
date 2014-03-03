@@ -9,4 +9,16 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-TestNews::Application.config.secret_key_base = '7bb0a6189bced42ad8ba9740f801d774974c02a1ec1d66b188a65e60a8b4bd008ccd4bd4e34270d94bca73c527fb215b5ce28ee526aaac5c52ef829b5d420813'
+
+def secure_token
+	token_file = Rails.root.join('.secret')
+	if File.exist?(token_file)
+		File.read(token_file).chomp
+	else 
+		token = SecureRandom.hex(64)
+		File.write(token_file, token)
+		token
+	end
+end
+
+TestNews::Application.config.secret_key_base = secure_token
