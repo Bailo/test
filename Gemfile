@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.0.2'
-
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '1.2'
+gem 'sass-rails'
+gem 'bootstrap-sass'
+gem 'twitter-bootstrap-rails'
 
 group :development, :test do 
 	gem 'sqlite3', '1.3.8'
@@ -12,15 +14,14 @@ group :development, :test do
 	gem 'capybara', '2.1.0'
 end
 
-# group :test do 
-#	gem 'selenium-webdriver', '2.35.1'
-#	
-# end
+group :test do 
+	gem 'selenium-webdriver', '2.35.1'	
+end
 
 group :assets do
-	gem 'sass-rails', '4.0.1'
 	gem 'uglifier', '2.1.1'
 	gem 'coffee-rails', '4.0.1'
+	
 end
 
 group :production do
