@@ -7,6 +7,7 @@ gem 'jbuilder', '1.2'
 gem 'sass-rails'
 gem 'bootstrap-sass'
 gem 'twitter-bootstrap-rails'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 group :development, :test do 
 	gem 'sqlite3', '1.3.8'
@@ -28,8 +29,7 @@ group :production do
 	gem 'pg', '0.15.1'
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+
 
 # Use unicorn as the app server
 # gem 'unicorn'

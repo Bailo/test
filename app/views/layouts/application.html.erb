@@ -10,6 +10,7 @@
 <body>
 <%= render "layouts/header" %>
 <div class="container">
+	<%= link_to "Sign Up", signup_path, class: "btn btn-large btn-primary" %>
 	<%= yield %>
 	<%= render "layouts/footer" %>
 </div>
