@@ -1,13 +1,16 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.2'
+gem 'rails', '4.0.4'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '1.2'
-gem 'sass-rails'
-gem 'bootstrap-sass'
-gem 'twitter-bootstrap-rails'
 gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bootstrap-sass', '~> 3.1.1'
+gem 'sass-rails', '~> 4.0.2'
+gem 'sprockets', '2.11.0'
+
+
+
 
 group :development, :test do 
 	gem 'sqlite3', '1.3.8'
@@ -16,7 +19,8 @@ group :development, :test do
 end
 
 group :test do 
-	gem 'selenium-webdriver', '2.35.1'	
+	gem 'selenium-webdriver', '2.35.1'
+  gem 'factory_girl_rails', '4.2.1'
 end
 
 group :assets do
