@@ -1,11 +1,15 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "testnews.com", root_path, id: "logo" %>
+      <%= link_to "evorave.com", root_path, id: "logo" %>
       <ul class="nav navbar-nav pull-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Championship", champ_path %></li>
+        <li><%= link_to "Participants", participants_path %></li>
+        <li><%= link_to "Blog", blog_path %></li>
+        <li><%= link_to "Gallery", gallery_path %></li>
+        <li><%= link_to "Contacts", contact_path %></li>
         <% if signed_in? %>
+          <li><%= link_to "My Acc", current_user %></li>
           <li><%= link_to "Sign Out", signout_path, method: "delete" %></li>
         <% else %>
           <li><%= link_to "Sign In", signin_path %></li>

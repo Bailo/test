@@ -14,7 +14,6 @@ describe "UserPages" do
   describe "signup page" do 
   	before { visit signup_path }
 
-  	it { should have_content('') }
   	it { should have_title('Sign Up') }
 
     let(:submit) { "Create my account" }
@@ -54,5 +53,13 @@ describe "UserPages" do
 
 
     end
+  end
+
+  describe "edit" do
+    let(:user) { FactoryGirl.create(:user) }
+
+    before { visit edit_user_path(user) }
+
+
   end
 end
